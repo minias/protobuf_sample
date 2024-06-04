@@ -1,5 +1,5 @@
 # See README.md.
-# go.mod module name is "protobuf/examples"
+# go.mod module name is "protobuf_sample"
 .PHONY: go gotest clean
 go:     add_person_go     list_people_go
 gotest: add_person_gotest list_people_gotest
@@ -11,8 +11,8 @@ clean:
 add_person_go: ./tutorialpb/addressbook.pb.go
 	go build -o bin/add_person cmd/add_person/add_person.go 
 add_person_gotest: ./tutorialpb/addressbook.pb.go
-	go test protobuf/examples/cmd/add_person
+	go test protobuf_sample/cmd/add_person
 list_people_go: ./tutorialpb/addressbook.pb.go
 	go build -o bin/list_people cmd/list_people/list_people.go
 list_people_gotest: ./tutorialpb/addressbook.pb.go
-	go test protobuf/examples/cmd/list_people
+	go test protobuf_sample/cmd/list_people
